@@ -9,3 +9,5 @@ spotipy
 requests
 io
 # Add other dependencies if needed
+spotipy
+# Add other dependencies if needed

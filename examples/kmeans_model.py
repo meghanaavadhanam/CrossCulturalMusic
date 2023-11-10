@@ -6,7 +6,7 @@ import joblib
 
 
 
-filled_tracks_df = pd.read_csv("/Users/meghanaavadhanam/Documents/filled_tracks.csv", encoding='utf-8')
+filled_tracks_df = pd.read_csv("filled_tracks.csv", encoding='utf-8')
 
 features = filled_tracks_df[['Danceability', 'Energy', 'Key', 'Loudness', 'Mode', 'Speechiness', 'Acousticness',
             'Instrumentalness', 'Liveness', 'Valence', 'Tempo','Cluster']]

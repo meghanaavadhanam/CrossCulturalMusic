@@ -76,7 +76,7 @@ sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 st.title('Cross Cultural Music Recommendation System 🎵')
 
-tracks_df = pd.read_csv("/Users/meghanaavadhanam/Documents/filled_tracks.csv")
+tracks_df = pd.read_csv("filled_tracks.csv")
 features = tracks_df[['Danceability', 'Energy', 'Key', 'Loudness', 'Mode', 'Speechiness', 'Acousticness',
             'Instrumentalness', 'Liveness', 'Valence', 'Tempo','Cluster']]
 

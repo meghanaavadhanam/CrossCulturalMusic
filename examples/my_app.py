@@ -57,7 +57,6 @@ if st.sidebar.button('Predict Cluster'):
     else:
         st.write('Please enter both Artist Name and Track Name.')
 """
-from PIL import Image
 import streamlit as st
 import pandas as pd
 from kmeans_predict import predict_cluster
@@ -65,9 +64,6 @@ from kmeans_model import kmeans
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from sklearn.neighbors import NearestNeighbors
-import requests
-from io import BytesIO
-
 
 # Set your Spotify API credentials
 client_id = "5e6f15d0c5de4bfa97265277b9e4c4f4"
@@ -100,9 +96,7 @@ if st.sidebar.button('Give me interesting recommendations!'):
         artist_image_url = artist['images'][0]['url'] if artist['images'] else None
 
         music_image_url = artist_image_url
-        response = requests.get(artist_image_url)
-        img = Image.open(BytesIO(response.content))
-        img_resized = img.resize((30,30))
+
         # Display the music-related image
         st.image(music_image_url, caption='Artist Icon', use_column_width=True)  
 
